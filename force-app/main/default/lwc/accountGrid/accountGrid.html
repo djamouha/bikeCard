@@ -1,0 +1,17 @@
+<template>
+    <div>
+        <lightning-button value="Get Accounts" label=" Get Accounts" onclick={handleAccounts}></lightning-button>
+    </div>
+    <div class="slds-grid slds-gutters">
+
+        <template for:each={accounts} for:item="acc">
+            <p key={acc.Id}>
+                
+                <c-account-detail account={acc}></c-account-detail>
+            </p>
+        </template>
+        
+        
+    </div>
+    
+</template>
